@@ -4,6 +4,12 @@ import { sumarImparesEnElRango } from "./ejercicio-3.js"
 import { esAnioBisiesto } from "./ejercicio-4.js"
 import { calcularPromedioEdadAdultos } from "./ejercicio-5.js"
 
+function logAsteriskLine(numero) {
+  console.log(`********************************************************************************************************************************`)
+  console.log(`*************************************************EJERCICIO ${numero}******************************************************************`)
+  console.log(`********************************************************************************************************************************`)
+}
+
 let esParTestCase = [
   { argument: 5, expected: false },
   { argument: 8, expected: true },
@@ -13,6 +19,7 @@ let esParTestCase = [
   { argument: 180, expected: true },
 ]
 
+logAsteriskLine(1)
 console.info(`Probaremos los casos de prueba para la funcion 'esPar'`)
 for (let testCase of esParTestCase) {
   try {
@@ -20,7 +27,7 @@ for (let testCase of esParTestCase) {
     let resultado = esPar(testCase.argument)
     console.debug(`el resultado fue: ${resultado}`)
 
-    if (resultado == testCase.expected) {
+    if (resultado !== testCase.expected) {
       console.error(`El resultado de esPar() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
     }
   } catch (exception) {
@@ -39,6 +46,7 @@ let cuantosMultiplosHayTestCase = [
   { argument: [6, 30], expected: 5 },   // Múltiplos de 6 dentro del rango 1-30: [6, 12, 18, 24, 30]
 ];
 
+logAsteriskLine(2)
 console.info(`Probaremos los casos de prueba para la funcion 'cuantosMultiplosHay'`)
 for (let testCase of cuantosMultiplosHayTestCase) {
   try {
@@ -46,7 +54,7 @@ for (let testCase of cuantosMultiplosHayTestCase) {
     let resultado = cuantosMultiplosHay(testCase.argument[0], testCase.argument[1])
     console.debug(`el resultado fue: ${resultado}`)
 
-    if (resultado == testCase.expected) {
+    if (resultado !== testCase.expected) {
       console.error(`El resultado de cuantosMultiplosHay() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
     }
   } catch (exception) {
@@ -64,6 +72,7 @@ let sumarImparesEnElRangoTestCase = [
   { argument: [0, 0], expected: 0 },     // No hay impares, suma: 0
 ];
 
+logAsteriskLine(3)
 console.info(`Probaremos los casos de prueba para la funcion 'sumarImparesEnElRango'`)
 for (let testCase of sumarImparesEnElRangoTestCase) {
   try {
@@ -71,7 +80,7 @@ for (let testCase of sumarImparesEnElRangoTestCase) {
     let resultado = sumarImparesEnElRango(testCase.argument[0], testCase.argument[1])
     console.debug(`el resultado fue: ${resultado}`)
 
-    if (resultado == testCase.expected) {
+    if (resultado !== testCase.expected) {
       console.error(`El resultado de sumarImparesEnElRango() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
     }
   } catch (exception) {
@@ -89,6 +98,7 @@ let esAnioBisiestoTestCase = [
   { argument: 1800, expected: false }, // 1800 es divisible por 100 pero no por 400, por lo que no es bisiesto
 ];
 
+logAsteriskLine(4)
 console.info(`Probaremos los casos de prueba para la funcion 'esAnioBisiesto'`)
 for (let testCase of esAnioBisiestoTestCase) {
   try {
@@ -96,7 +106,7 @@ for (let testCase of esAnioBisiestoTestCase) {
     let resultado = esAnioBisiesto(testCase.argument)
     console.debug(`el resultado fue: ${resultado}`)
 
-    if (resultado == testCase.expected) {
+    if (resultado !== testCase.expected) {
       console.error(`El resultado de esAnioBisiesto() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
     }
   } catch (exception) {
@@ -113,6 +123,7 @@ let calcularPromedioEdadAdultosTestCase = [
   { argument: [{nombre: "Maria", edad: 35}, {nombre: "Pablo", edad: 40}], expected: 37.5 }, // Ambos son adultos, promedio de (35 + 40) / 2 = 37.5
 ];
 
+logAsteriskLine(5)
 console.info(`Probaremos los casos de prueba para la funcion 'calcularPromedioEdadAdultos'`)
 for (let testCase of calcularPromedioEdadAdultosTestCase) {
   try {
@@ -120,7 +131,7 @@ for (let testCase of calcularPromedioEdadAdultosTestCase) {
     let resultado = calcularPromedioEdadAdultos(testCase.argument)
     console.debug(`el resultado fue: ${resultado}`)
 
-    if (resultado == testCase.expected) {
+    if (resultado !== testCase.expected) {
       console.error(`El resultado de calcularPromedioEdadAdultos() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
     }
   } catch (exception) {
