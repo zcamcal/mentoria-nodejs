@@ -68,7 +68,7 @@ let sumarImparesEnElRangoTestCase = [
   { argument: [2, 10], expected: 24 },   // Impares: [3, 5, 7, 9], suma: 3 + 5 + 7 + 9 = 24
   { argument: [1, 1], expected: 1 },     // Impares: [1], suma: 1
   { argument: [10, 20], expected: 75 },  // Impares: [11, 13, 15, 17, 19], suma: 11 + 13 + 15 + 17 + 19 = 75
-  { argument: [15, 30], expected: 105 }, // Impares: [15, 17, 19, 21, 23, 25, 27, 29], suma: 15 + 17 + 19 + 21 + 23 + 25 + 27 + 29 = 105
+  { argument: [15, 30], expected: 176 }, // Impares: [15, 17, 19, 21, 23, 25, 27, 29], suma: 15 + 17 + 19 + 21 + 23 + 25 + 27 + 29 = 105
   { argument: [0, 0], expected: 0 },     // No hay impares, suma: 0
 ];
 
