@@ -1,0 +1,16 @@
+{
+  "name": "ejercicios-control-flujo",
+  "version": "1.0.0",
+  "description": "nose",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npx ts-node ./index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
