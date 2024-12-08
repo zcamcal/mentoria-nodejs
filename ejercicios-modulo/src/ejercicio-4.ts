@@ -16,7 +16,7 @@ Enunciado: Escribe una función que reciba un año como parámetro y determine s
  * esAnioBisiesto(2024) = true; el anio 2024 es bisiesto por que 2024 es divisible entre 4, si no es bisiesto entonces false
  *
  */
-export function esAnioBisiesto(anio) {
+export function esAnioBisiesto(anio: number): boolean {
   // tu codigo aqui :)
   throw new Error("no implementada la funcion!") //eliminar cuando se vaya a implementar
 }

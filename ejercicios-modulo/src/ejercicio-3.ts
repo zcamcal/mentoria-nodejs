@@ -5,14 +5,8 @@
 
 /**
  * Esta funcion permite sumar todos los numeros impares desde X numero hasta Y numero, inclusive.
- * @param {number} desde numero del cual partir a buscar impares
- * @param {number} hasta numero donde dejar de buscar impares
- *
- * @returns {number} la suma de todos los numeros impares encontrados desde hasta.
- * @example
- * sumarImparesEnElRango(1, 5) = 9; explicacion: los numeros impares desde 1 hasta 5 son 3, el 1, 3 y 5, la suma de esos 3 numeros son 9.
  */
-export function sumarImparesEnElRango(desde, hasta) {
+export function sumarImparesEnElRango(desde: number, hasta: number): number {
   // tu codigo aqui :)
   throw new Error("no implementada la funcion!") //eliminar cuando se vaya a implementar
 }

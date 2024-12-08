@@ -1,10 +1,10 @@
-import { esPar } from "./ejercicio-1.js"
-import { cuantosMultiplosHay } from "./ejercicio-2.js"
-import { sumarImparesEnElRango } from "./ejercicio-3.js"
-import { esAnioBisiesto } from "./ejercicio-4.js"
-import { calcularPromedioEdadAdultos } from "./ejercicio-5.js"
+import { esPar } from "./ejercicio-1"
+import { cuantosMultiplosHay } from "./ejercicio-2"
+import { sumarImparesEnElRango } from "./ejercicio-3"
+import { esAnioBisiesto } from "./ejercicio-4"
+import { calcularPromedioEdadAdultos } from "./ejercicio-5"
 
-function logAsteriskLine(numero) {
+function logAsteriskLine(numero: number) {
   console.log(`********************************************************************************************************************************`)
   console.log(`*************************************************EJERCICIO ${numero}******************************************************************`)
   console.log(`********************************************************************************************************************************`)
@@ -28,10 +28,10 @@ for (let testCase of esParTestCase) {
     console.debug(`el resultado fue: ${resultado}`)
 
     if (resultado !== testCase.expected) {
-      console.error(`El resultado de esPar() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
+      console.error(`El resultado de esPar() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected}`)
     }
   } catch (exception) {
-    console.error(`ocurrio un error en la ejecucion del test case para la funcion esPar`)
+    console.error(`ocurrio un error en la ejecucion del test case para la funcion esPar, error: ${exception}`)
     continue
   }
 }
@@ -58,7 +58,7 @@ for (let testCase of cuantosMultiplosHayTestCase) {
       console.error(`El resultado de cuantosMultiplosHay() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
     }
   } catch (exception) {
-    console.error(`ocurrio un error en la ejecucion del test case para la funcion cuantosMultiplosHay`)
+    console.error(`ocurrio un error en la ejecucion del test case para la funcion cuantosMultiplosHay, error: ${exception}`)
   }
 }
 
@@ -84,7 +84,7 @@ for (let testCase of sumarImparesEnElRangoTestCase) {
       console.error(`El resultado de sumarImparesEnElRango() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
     }
   } catch (exception) {
-    console.error(`ocurrio un error en la ejecucion del test case para la funcion sumarImparesEnElRango`)
+    console.error(`ocurrio un error en la ejecucion del test case para la funcion sumarImparesEnElRango, error: ${exception}`)
   }
 }
 
@@ -110,7 +110,7 @@ for (let testCase of esAnioBisiestoTestCase) {
       console.error(`El resultado de esAnioBisiesto() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
     }
   } catch (exception) {
-    console.error(`ocurrio un error en la ejecucion del test case para la funcion esAnioBisiesto`)
+    console.error(`ocurrio un error en la ejecucion del test case para la funcion esAnioBisiesto, error: ${exception}`)
   }
 }
 
@@ -135,6 +135,6 @@ for (let testCase of calcularPromedioEdadAdultosTestCase) {
       console.error(`El resultado de calcularPromedioEdadAdultos() no es el esperado, fue: ${resultado} y esperabamos: ${testCase.expected} `)
     }
   } catch (exception) {
-    console.error(`ocurrio un error en la ejecucion del test case para la funcion calcularPromedioEdadAdultos`)
+    console.error(`ocurrio un error en la ejecucion del test case para la funcion calcularPromedioEdadAdultos, error: ${exception}`)
   }
 }
