@@ -1,6 +1,22 @@
 # Sistema de venta
 Bienvenido al sistema de ventas que tenemos, favor sirvase de guia en lo siguiente y decida sabiamente que producto quiere llevar
 
+# Requisitos:
+Considera lo siguiente:
+- el sistema debe trabajar todo texto ingresado en minusculas, inclusive nuestros productos deben estar en minusculas pese a lo que se menciona abajo en inventario
+- el sistema debe validar que el usuario ingrese correctamente los valores, por ejemplo si esperamos el monto con el que pagara, debemos validar que sea un numero correcto y no un texto.
+
+# Forma de uso
+Para usar el sistema y comprar solo debes usar el comando
+```
+npm start --producto="tu producto tal cual se encuentra escrito abajo en productos" --monto=5000
+```
+
+**Explicacion**
+- el parametro: 'producto' es el nombre que puedes encontrar abajo en 'inventario', recuerda agregar comillas dobles para enviar el nombre del producto completo como se puede ver en el comando arriba, los nombres los encuentras en el listado 'productos', se obtiene a partir del primer texto hasta la primera coma, por ejemplo: Smartphone Samsung Galaxy S23.
+- el parametro: 'monto' es el monto monetario que el cliente pagara, por ejemplo si el producto cuesta $5.000, el cliente nos podria pagar justo con $5.000 o talvez con $15.000, incluso podria tratar de pagarnos con $500, en fin este parametro permite entregar el monto con el que el cliente cancelara el precio del producto.
+
+# Inventario
 ## Categorías
 Nuestro sistema de ventas tiene las siguientes categorías con descuentos:
 - Electrónica: descuento del 15%, como ejemplo se incluyen los siguientes elementos: smartphones, laptops, tablets y accesorios electrónicos.
@@ -50,11 +66,11 @@ Nuestro sistema de ventas incluye los siguientes productos, organizados por cate
 - Cafetera Nespresso VertuoPlus, corresponde a la categoría 'Hogar', su precio $169.990 CLP
 - Planchadora Rowenta DW5080, corresponde a la categoría 'Hogar', su precio $59.490 CLP
 - Ventilador de Torre Lasko, corresponde a la categoría 'Hogar', su precio $76.490 CLP
-- "Cien Años de Soledad" Gabriel García Márquez, corresponde a la categoría 'Libros', su precio $16.990 CLP
-- "Educated" Tara Westover, corresponde a la categoría 'Libros', su precio $12.740 CLP
-- "Sapiens: De animales a dioses" Yuval Noah Harari, corresponde a la categoría 'Libros', su precio $16.150 CLP
-- "El Código Da Vinci" Dan Brown, corresponde a la categoría 'Libros', su precio $9.340 CLP
-- "The Catcher in the Rye" J.D. Salinger, corresponde a la categoría 'Libros', su precio $11.020 CLP
+- Cien Años de Soledad Gabriel García Márquez, corresponde a la categoría 'Libros', su precio $16.990 CLP
+- Educated Tara Westover, corresponde a la categoría 'Libros', su precio $12.740 CLP
+- Sapiens: De animales a dioses Yuval Noah Harari, corresponde a la categoría 'Libros', su precio $16.150 CLP
+- El Código Da Vinci Dan Brown, corresponde a la categoría 'Libros', su precio $9.340 CLP
+- The Catcher in the Rye J.D. Salinger, corresponde a la categoría 'Libros', su precio $11.020 CLP
 - Crema Facial Neutrogena Hydro Boost, corresponde a la categoría 'Belleza', su precio $18.640 CLP
 - Maquillaje Maybelline Fit Me, corresponde a la categoría 'Belleza', su precio $7.640 CLP
 - Shampoo y Acondicionador Dove, corresponde a la categoría 'Belleza', su precio $5.090 CLP
