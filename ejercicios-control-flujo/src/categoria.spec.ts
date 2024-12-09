@@ -31,7 +31,7 @@ describe('test', () => {
 
   for (let categoria of categorias) {
     it(`descuento para categoria: '${categoria.name}' del ${categoria.descuento}%`, () => {
-        let descuentoPorAplicar = encontrarDescuentoCategoria("Electronica")
+        let descuentoPorAplicar = encontrarDescuentoCategoria(categoria.name)
         assert.ok(descuentoPorAplicar == 15, `el descuento aplicado fue del ${descuentoPorAplicar} no corresponde al ${categoria.descuento} esperado`)
     })
   }
