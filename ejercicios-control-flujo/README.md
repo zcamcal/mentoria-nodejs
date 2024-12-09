@@ -5,6 +5,7 @@ Bienvenido al sistema de ventas que tenemos, favor sirvase de guia en lo siguien
 Considera lo siguiente:
 - el sistema debe trabajar todo texto ingresado en minusculas, inclusive nuestros productos deben estar en minusculas pese a lo que se menciona abajo en inventario
 - el sistema debe validar que el usuario ingrese correctamente los valores, por ejemplo si esperamos el monto con el que pagara, debemos validar que sea un numero correcto y no un texto.
+- El sistema no considerara tildes 
 
 # Forma de uso
 Para usar el sistema y comprar solo debes usar el comando
@@ -19,7 +20,7 @@ npm start --producto="tu producto tal cual se encuentra escrito abajo en product
 # Inventario
 ## Categorías
 Nuestro sistema de ventas tiene las siguientes categorías con descuentos:
-- Electrónica: descuento del 15%, como ejemplo se incluyen los siguientes elementos: smartphones, laptops, tablets y accesorios electrónicos.
+- Electronica: descuento del 15%, como ejemplo se incluyen los siguientes elementos: smartphones, laptops, tablets y accesorios electrónicos.
 - Ropa: descuento del 10%, como ejemplo se incluyen los siguientes elementos: ropa para hombres, mujeres y niños, con opciones de moda casual y formal.
 - Juguetes: descuento del 20%, como ejemplo se incluyen los siguientes elementos: juguetes educativos, juguetes de acción, muñecas y más.
 - Alimentos: descuento del 5%, como ejemplo se incluyen los siguientes elementos: productos de supermercado, snacks, bebidas y alimentos frescos.

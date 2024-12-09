@@ -4,7 +4,11 @@
   "description": "Nos permite vender nuestros productos por terminal al resto de desarrolladores",
   "main": "src/index.ts",
   "scripts": {
-    "start": "npx ts-node src/index.ts"
+    "start": "npx ts-node src/index.ts",
+    "test:categorias": "node --import tsx src/categoria.spec.ts",
+    "test:productos": "node --import tsx src/productos.spec.ts",
+    "test:descuentos": "node --import tsx src/descuentos.spec.ts",
+    "test:ventas": "node --import tsx src/ventas.spec.ts"
   },
   "author": "",
   "license": "ISC",

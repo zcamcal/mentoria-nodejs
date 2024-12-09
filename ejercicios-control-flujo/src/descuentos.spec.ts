@@ -1,5 +1,5 @@
 import { describe, it } from "node:test";
-import { encontrarPrecioDelProducto, encontrarCategoriaDelProducto } from "./productos";
+import { descuento, descontar } from "./descuentos";
 import assert from "node:assert";
 
 const productos = [
@@ -35,45 +35,44 @@ const productos = [
   { nombre: "Lámpara de Pie LED Philips", precio: 67990, categoria: { name: "Muebles", descuento: 30 }, precioDescontado: 47593, descontamos: 20397 },
   { nombre: "Aspiradora Dyson V11", precio: 509990, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 458991, descontamos: 50999 },
   { nombre: "Batidora KitchenAid Stand Mixer", precio: 322990, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 290691, descontamos: 32299 },
-  { nombre: "Cafetera Nespresso VERTuoPlus", precio: 169990, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 152991, descontamos: 16999 },
+  { nombre: "Cafetera Nespresso VertuoPlus", precio: 169990, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 152991, descontamos: 16999 },
   { nombre: "Planchadora Rowenta DW5080", precio: 59490, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 53541, descontamos: 5949 },
   { nombre: "Ventilador de Torre Lasko", precio: 76490, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 68841, descontamos: 7649 },
   { nombre: "Cien Años de Soledad Gabriel García Márquez", precio: 16990, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 14441.5, descontamos: 2550.5 },
-  { nombre: "Educated Tara WesTOVer", precio: 12740, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 10829, descontamos: 1910 },
+  { nombre: "Educated Tara Westover", precio: 12740, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 10829, descontamos: 1910 },
   { nombre: "Sapiens: De animales a dioses Yuval Noah Harari", precio: 16150, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 13727.5, descontamos: 2422.5 },
   { nombre: "El Código Da Vinci Dan Brown", precio: 9340, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 7939, descontamos: 1401 },
-  { nombre: "The Catcher in tHe Rye J.D. Salinger", precio: 11020, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 9377, descontamos: 1643 },
+  { nombre: "The Catcher in the Rye J.D. Salinger", precio: 11020, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 9377, descontamos: 1643 },
   { nombre: "Crema Facial Neutrogena Hydro Boost", precio: 18640, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 15264.8, descontamos: 3375.2 },
-  { nombre: "Maquillaje MAYBElline Fit Me", precio: 7640, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 6264.8, descontamos: 1375.2 },
+  { nombre: "Maquillaje Maybelline Fit Me", precio: 7640, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 6264.8, descontamos: 1375.2 },
   { nombre: "Shampoo y Acondicionador Dove", precio: 5090, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 4173.8, descontamos: 916.2 },
-  { nombre: "Perfume ChaNel no. 5", precio: 127490, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 104538.8, descontamos: 22851.2 },
+  { nombre: "Perfume Chanel No. 5", precio: 127490, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 104538.8, descontamos: 22851.2 },
   { nombre: "Espejo de Maquillaje con Luz LED", precio: 33990, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 27811.8, descontamos: 6184.2 },
-  { nombre: "objeto no existente", precio: 0, categoria: { name: "ninguna", descuento: 0 }, precioDescontado: 0, descontamos: 0 },
-  { nombre: "objeto no existente 2", precio: 0, categoria: { name: "ninguna", descuento: 0 }, precioDescontado: 0, descontamos: 0 },
 ];
 
-describe('funcion: encontrarCategoriaDelProducto', () => {
+describe('funcion: descuento', () => {
   it('la funcion existe', () => {
-    assert.ok(encontrarCategoriaDelProducto != null, 'la funcion no existe')
+    assert.ok(descuento != null, 'la funcion no existe')
   })
 
   for (let producto of productos) {
-    it(`Dado el producto: ${producto.nombre}, cuando busquemos su categoria, entonces su categoria sera: ${producto.categoria.name}`, () => {
-      let categoriaEncontrada: string = encontrarCategoriaDelProducto(producto.nombre)
-      assert.ok(categoriaEncontrada === producto.categoria.name.toLowerCase(), `la categoria encontrada debio ser: ${producto.categoria.name.toLowerCase()}, pero fue: ${categoriaEncontrada}`)
+    it(`Dado un producto: '${producto.nombre}', Cuando apliquemos ${producto.categoria.descuento}% de descuento al precio: $${producto.precio}, entonces se descontaran: $${producto.descontamos}`, () => {
+      let descontado: number = descuento(producto.categoria.name)
+      assert.ok(descontado === producto.descontamos, `el monto descontado debio ser: ${producto.descontamos}, pero fue de: ${descontado}`)
     })
   }
 })
 
-describe('funcion: encontrarPrecioDelProducto', () => {
+describe('funcion: descontar', () => {
   it('la funcion existe', () => {
-    assert.ok(encontrarPrecioDelProducto != null, 'la funcion no existe')
+    assert.ok(descontar != null, 'la funcion no existe')
   })
 
   for (let producto of productos) {
-    it(`Dado el producto: ${producto.nombre}, cuando busquemos su precio, entonces sera: ${producto.precio}`, () => {
-      let precioEnocntrado: number = encontrarPrecioDelProducto(producto.nombre)
-      assert.ok(precioEnocntrado === producto.precio, `el precio encontrado debio ser: ${producto.precio}, pero fue: ${precioEnocntrado}`)
+    it(`Dado un producto: '${producto.nombre}', Cuando apliquemos ${producto.categoria.descuento}% de descuento al precio: $${producto.precio}, entonces el precio final sera: $${producto.precioDescontado}`, () => {
+      let precioDescontado: number = descontar(producto.precio, producto.categoria.name)
+      assert.ok(precioDescontado === producto.precioDescontado, `el monto descontado debio ser: ${producto.precioDescontado}, pero fue de: ${precioDescontado}`)
     })
   }
+
 })
