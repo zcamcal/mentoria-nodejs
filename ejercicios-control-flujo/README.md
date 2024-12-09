@@ -16,8 +16,23 @@ npm start --producto="tu producto tal cual se encuentra escrito abajo en product
 **Explicacion**
 - el parametro: 'producto' es el nombre que puedes encontrar abajo en 'inventario', recuerda agregar comillas dobles para enviar el nombre del producto completo como se puede ver en el comando arriba, los nombres los encuentras en el listado 'productos', se obtiene a partir del primer texto hasta la primera coma, por ejemplo: Smartphone Samsung Galaxy S23.
 - el parametro: 'monto' es el monto monetario que el cliente pagara, por ejemplo si el producto cuesta $5.000, el cliente nos podria pagar justo con $5.000 o talvez con $15.000, incluso podria tratar de pagarnos con $500, en fin este parametro permite entregar el monto con el que el cliente cancelara el precio del producto.
+- Esto te permitira probar por tu cuenta tus casos en particular, considera que probara el sistema completo no solo una funcion.
+
+# Formas de probar
+Para probar funcion por funcion estan creados los siguientes comandos con npm:
+```
+npm run test:descuentos
+npm run test:categorias
+npm run test:productos
+npm run test:ventas
+```
+
+**Importante**
+Considera que cada uno de esos comandos probara un archivo en particular con todas sus funciones dentro, por ejemplo `npm run test:descuentos` probara todas las funciones creadas en un inicio.
 
 # Inventario
+Basate en lo siguiente para completar tus funciones y saber que retornar, imagina que esto seria tu base de datos solo que las dejaras en duro en tu codigo.
+
 ## Categorías
 Nuestro sistema de ventas tiene las siguientes categorías con descuentos:
 - Electronica: descuento del 15%, como ejemplo se incluyen los siguientes elementos: smartphones, laptops, tablets y accesorios electrónicos.
