@@ -6,6 +6,7 @@ Dentro del directorio: `src` encontraras archivos de codigo, ahi dentro veras fu
 - ventas.ts
 - productos.ts
 - categorias.ts
+
 **considera ademas que por cada archivo anterior habra uno con el mismo nombre pero que tendra ademas `.spec.` esos son archivos de pruebas, asi que solo ignoralos.**
 
 El archivo `index.ts` es para ejecutar el flujo completo de manera libre con el comando `npm start` que se explica mas abajo
