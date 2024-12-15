@@ -35,7 +35,7 @@ const productos = [
   { nombre: "Lámpara de Pie LED Philips", precio: 67990, categoria: { name: "Muebles", descuento: 30 }, precioDescontado: 47593, descontamos: 20397 },
   { nombre: "Aspiradora Dyson V11", precio: 509990, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 458991, descontamos: 50999 },
   { nombre: "Batidora KitchenAid Stand Mixer", precio: 322990, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 290691, descontamos: 32299 },
-  { nombre: "Cafetera Nespresso VertuoPlus", precio: 169990, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 152991, descontamos: 16999 },
+  { nombre: "Cafetera Nespresso VertuPlus", precio: 169990, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 152991, descontamos: 16999 },
   { nombre: "Planchadora Rowenta DW5080", precio: 59490, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 53541, descontamos: 5949 },
   { nombre: "Ventilador de Torre Lasko", precio: 76490, categoria: { name: "Hogar", descuento: 10 }, precioDescontado: 68841, descontamos: 7649 },
   { nombre: "Cien Años de Soledad Gabriel García Márquez", precio: 16990, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 14441.5, descontamos: 2550.5 },
