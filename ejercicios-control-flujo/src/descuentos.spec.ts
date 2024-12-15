@@ -3,7 +3,7 @@ import { descuento, descontar } from "./descuentos";
 import assert from "node:assert";
 
 const productos = [
-  { nombre: "Smartphone Samsung Galaxy S23", precio: 679990, categoria: { name: "Electronica", descuento: 15 }, precioDescontado: 578492.5, descontamos: 101497.5 },
+  { nombre: "Smartphone Samsung Galaxy S23", precio: 679990, categoria: { name: "Electronica", descuento: 15 }, precioDescontado: 577991.5, descontamos: 101497.5 },
   { nombre: "Laptop HP Spectre x360", precio: 1359990, categoria: { name: "Electronica", descuento: 15 }, precioDescontado: 1155991.5, descontamos: 204998.5 },
   { nombre: "Tablet Apple iPad Air", precio: 509990, categoria: { name: "Electronica", descuento: 15 }, precioDescontado: 433491.5, descontamos: 76498.5 },
   { nombre: "Auriculares Bose QuietComfort 45", precio: 279490, categoria: { name: "Electronica", descuento: 15 }, precioDescontado: 237566.5, descontamos: 41823.5 },
@@ -18,7 +18,7 @@ const productos = [
   { nombre: "Hot Wheels Track Set", precio: 25490, categoria: { name: "Juguetes", descuento: 20 }, precioDescontado: 20392, descontamos: 5098 },
   { nombre: "Juego de Construcción K'NEX", precio: 50990, categoria: { name: "Juguetes", descuento: 20 }, precioDescontado: 40792, descontamos: 10198 },
   { nombre: "Peluche de Pelotero de Toy Story", precio: 16990, categoria: { name: "Juguetes", descuento: 20 }, precioDescontado: 13592, descontamos: 3398 },
-  { nombre: "Cereal Kellogg's Cornflakes", precio: 4240, categoria: { name: "Alimentos", descuento: 5 }, precioDescontado: 4038, descontamos: 202 },
+  { nombre: "Cereal Kellogg's Cornflakes", precio: 4240, categoria: { name: "Alimentos", descuento: 5 }, precioDescontado: 4028, descontamos: 202 },
   { nombre: "Jugo de Naranja Tropicana", precio: 2965, categoria: { name: "Alimentos", descuento: 5 }, precioDescontado: 2816.75, descontamos: 148.25 },
   { nombre: "Pechuga de Pollo Congelada", precio: 6791, categoria: { name: "Alimentos", descuento: 5 }, precioDescontado: 6451.45, descontamos: 339.55 },
   { nombre: "Arroz Basmati", precio: 4667, categoria: { name: "Alimentos", descuento: 5 }, precioDescontado: 4433.65, descontamos: 233.35 },
@@ -42,12 +42,12 @@ const productos = [
   { nombre: "Educated Tara Westover", precio: 12740, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 10829, descontamos: 1910 },
   { nombre: "Sapiens: De animales a dioses Yuval Noah Harari", precio: 16150, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 13727.5, descontamos: 2422.5 },
   { nombre: "El Código Da Vinci Dan Brown", precio: 9340, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 7939, descontamos: 1401 },
-  { nombre: "The Catcher in the Rye J.D. Salinger", precio: 11020, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 9377, descontamos: 1643 },
-  { nombre: "Crema Facial Neutrogena Hydro Boost", precio: 18640, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 15264.8, descontamos: 3375.2 },
+  { nombre: "The Catcher in the Rye J.D. Salinger", precio: 11020, categoria: { name: "Libros", descuento: 15 }, precioDescontado: 9367, descontamos: 1643 },
+  { nombre: "Crema Facial Neutrogena Hydro Boost", precio: 18640, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 15284.8, descontamos: 3375.2 },
   { nombre: "Maquillaje Maybelline Fit Me", precio: 7640, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 6264.8, descontamos: 1375.2 },
   { nombre: "Shampoo y Acondicionador Dove", precio: 5090, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 4173.8, descontamos: 916.2 },
-  { nombre: "Perfume Chanel No. 5", precio: 127490, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 104538.8, descontamos: 22851.2 },
-  { nombre: "Espejo de Maquillaje con Luz LED", precio: 33990, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 27811.8, descontamos: 6184.2 },
+  { nombre: "Perfume Chanel No. 5", precio: 127490, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 104541.8, descontamos: 22851.2 },
+  { nombre: "Espejo de Maquillaje con Luz LED", precio: 33990, categoria: { name: "Belleza", descuento: 18 }, precioDescontado: 27871.8, descontamos: 6184.2 },
 ];
 
 describe('funcion: descuento', () => {
@@ -56,9 +56,9 @@ describe('funcion: descuento', () => {
   })
 
   for (let producto of productos) {
-    it(`Dado un producto: '${producto.nombre}', Cuando apliquemos ${producto.categoria.descuento}% de descuento al precio: $${producto.precio}, entonces se descontaran: $${producto.descontamos}`, () => {
+    it(`dado el producto ${producto.nombre}, cuando busquemos si posee descuento, entonces su descuento sera de: ${producto.categoria.descuento}`, () => {
       let descontado: number = descuento(producto.categoria.name)
-      assert.ok(descontado === producto.descontamos, `el monto descontado debio ser: ${producto.descontamos}, pero fue de: ${descontado}`)
+      assert.ok(descontado === producto.categoria.descuento, `el monto a descontar debio ser: ${producto.categoria.descuento}, pero fue de: ${descontado}`)
     })
   }
 })
