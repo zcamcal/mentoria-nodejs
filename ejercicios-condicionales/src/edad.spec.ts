@@ -56,24 +56,24 @@ describe('clasificarEdad', () => {
     assert.ok(typeof resultado === 'string');
   });
 
-  it('debe clasificar como "Niño" para edades menores a 12', () => {
-    assert.ok(clasificarEdad(5) === "Niño");
-    assert.ok(clasificarEdad(11) === "Niño");
+  it('debe clasificar como "Niñez" para edades menores a 13', () => {
+    assert.ok(clasificarEdad(5) === "Niñez");
+    assert.ok(clasificarEdad(11) === "Niñez");
   });
 
-  it('debe clasificar como "Adolescente" para edades entre 12 y 17', () => {
-    assert.ok(clasificarEdad(12) === "Adolescente");
-    assert.ok(clasificarEdad(17) === "Adolescente");
+  it('debe clasificar como "Adolescencia" para edades entre 13 y 18', () => {
+    assert.ok(clasificarEdad(13) === "Adolescencia");
+    assert.ok(clasificarEdad(18) === "Adolescencia");
   });
 
-  it('debe clasificar como "Adulto" para edades entre 18 y 64', () => {
-    assert.ok(clasificarEdad(18) === "Adulto");
-    assert.ok(clasificarEdad(40) === "Adulto");
-    assert.ok(clasificarEdad(64) === "Adulto");
+  it('debe clasificar como "Adultez" para edades entre 19 y 64', () => {
+    assert.ok(clasificarEdad(19) === "Adultez");
+    assert.ok(clasificarEdad(40) === "Adultez");
+    assert.ok(clasificarEdad(64) === "Adultez");
   });
 
-  it('debe clasificar como "Senior" para edades mayores o iguales a 65', () => {
-    assert.ok(clasificarEdad(65) === "Senior");
-    assert.ok(clasificarEdad(80) === "Senior");
+  it('debe clasificar como "Vejez" para edades mayores o iguales a 65', () => {
+    assert.ok(clasificarEdad(65) === "Vejez");
+    assert.ok(clasificarEdad(80) === "Vejez");
   });
 });
