@@ -12,38 +12,28 @@ describe('calcularBonificacion', () => {
     assert.ok(typeof resultado === 'number');
   });
 
-  it('debe retornar el 5% del sueldo para 1 año de trabajo', () => {
-    assert.ok(calcularBonificacion(2000, 1) === 100);
+  it('debe retornar 0% del salario para menos de 2 años de trabajo', () => {
+    assert.ok(calcularBonificacion(2000, 0) === 0);  // No bonificación
+    assert.ok(calcularBonificacion(2000, 1) === 0);  // No bonificación
   });
 
-  it('debe retornar el 10% del sueldo para 3 años de trabajo', () => {
-    assert.ok(calcularBonificacion(2000, 3) === 200);
+  it('debe retornar 5% del salario para entre 2 y 5 años de trabajo', () => {
+    assert.ok(calcularBonificacion(2000, 2) === 100);  // 5% de 2000
+    assert.ok(calcularBonificacion(2000, 3) === 100);  // 5% de 2000
+    assert.ok(calcularBonificacion(2000, 5) === 100);  // 5% de 2000
   });
 
-  it('debe retornar el 20% del sueldo para 5 años de trabajo', () => {
-    assert.ok(calcularBonificacion(2000, 5) === 400);
+  it('debe retornar 10% del salario para más de 5 años de trabajo', () => {
+    assert.ok(calcularBonificacion(2000, 6) === 200);  // 10% de 2000
+    assert.ok(calcularBonificacion(2000, 10) === 200);  // 10% de 2000
   });
 
-  it('debe retornar el 30% del sueldo para 10 años de trabajo', () => {
-    assert.ok(calcularBonificacion(2000, 10) === 600);
+  it('debe retornar 0% si el salario es menor o igual a 0', () => {
+    assert.ok(calcularBonificacion(0, 3) === 0);   // No bonificación
+    assert.ok(calcularBonificacion(-1000, 5) === 0);  // No bonificación
   });
 
-  it('debe retornar el 50% del sueldo para más de 10 años de trabajo', () => {
-    assert.ok(calcularBonificacion(2000, 12) === 1000);
-    assert.ok(calcularBonificacion(2000, 15) === 1000);
-  });
-
-  it('debe retornar 0 si los años de trabajo son menos de 1 año', () => {
-    assert.ok(calcularBonificacion(2000, 0) === 0);
-    assert.ok(calcularBonificacion(2000, 0.5) === 0);
-  });
-
-  it('debe retornar 0 si el sueldo es 0', () => {
-    assert.ok(calcularBonificacion(0, 5) === 0);
-    assert.ok(calcularBonificacion(0, 10) === 0);
-  });
-
-  it('debe retornar 0 si el sueldo es negativo', () => {
-    assert.ok(calcularBonificacion(-1000, 5) === 0);
+  it('debe retornar 0% si el salario es negativo', () => {
+    assert.ok(calcularBonificacion(-500, 3) === 0);   // No bonificación
   });
 });
