@@ -1,0 +1,23 @@
+{
+  "name": "sistema-ventas",
+  "version": "1.0.0",
+  "description": "Nos permite vender nuestros productos por terminal al resto de desarrolladores",
+  "main": "src/index.ts",
+  "scripts": {
+    "test:numeros": "node --import tsx src/numeros.spec.ts",
+    "test:bonificacion": "node --import tsx src/calculoBonificacion.spec.ts",
+    "test:edad": "node --import tsx src/edad.spec.ts",
+    "test:esPar": "node --import tsx src/esPar.spec.ts",
+    "test:impuestos": "node --import tsx src/impuestos.spec.ts",
+    "test:pedido": "node --import tsx src/pedido.spec.ts",
+    "test:temperatura": "node --import tsx src/temperatura.spec.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
