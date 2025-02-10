@@ -57,7 +57,7 @@ describe('Funciones Fibonacci', () => {
   it('fibocito debe retornar un error o valor negativo si N > M', () => {
     try {
       const resultado = fibocito(5, 3);
-      assert.fail('La función no debe permitir que N sea mayor que M');
+      assert.fail(`'La función no debe permitir que N sea mayor que M', resultado: ${resultado}`);
     } catch (e) {
       assert.ok(e instanceof Error, 'Se esperaba un error');
     }

@@ -1,59 +1,45 @@
 {
   "compilerOptions": {
-    /* Projects */
-    // "incremental": true,                            /* Habilita la compilación incremental para mejorar tiempos de compilación. */
-    // "composite": true,                              /* Habilita las restricciones necesarias para que el proyecto funcione con referencias entre proyectos. */
-    // "tsBuildInfoFile": "./.tsbuildinfo",            /* Especifica el archivo .tsbuildinfo para la compilación incremental. */
-    // "disableSourceOfProjectReferenceRedirect": true, /* Deshabilita la preferencia por los archivos fuente en lugar de los archivos de declaración. */
-
-    /* Language and Environment */
-    "target": "es2016",                               /* Genera código JavaScript compatible con ES2016. */
-    "module": "commonjs",                             /* Usa el sistema de módulos CommonJS (compatible con Node.js). */
-    "rootDir": "./src",                               /* La raíz de tus archivos fuente será la carpeta 'src'. */
-    "lib": ["es2016", "dom"],                         /* Especifica las bibliotecas necesarias para un entorno moderno y compatible con el DOM. */
-    "strict": true,                                   /* Habilita todas las opciones de comprobación estricta. */
-    "noImplicitAny": true,                            /* Deshabilita el tipo implícito 'any' en variables, parámetros y resultados. */
-    "forceConsistentCasingInFileNames": true,         /* Asegura que los nombres de archivo sean consistentes en mayúsculas y minúsculas. */
-    "esModuleInterop": true,                          /* Habilita la interoperabilidad de módulos ES6 y CommonJS. */
-    "skipLibCheck": true,                             /* Omite la comprobación de bibliotecas para mejorar el rendimiento de compilación. */
-    "resolveJsonModule": true,                        /* Habilita la importación de archivos JSON. */
-    "noEmitOnError": true,                            /* No genera archivos de salida si hay errores en el código. */
-    "noUnusedLocals": true,                           /* Informa de las variables locales no utilizadas. */
-    "noUnusedParameters": true,                       /* Informa de los parámetros de funciones no utilizados. */
-    "noImplicitReturns": true,                        /* Informa de funciones que no retornan un valor explícito en todos los caminos. */
-    "noFallthroughCasesInSwitch": true,               /* Informa de casos de 'switch' sin 'break' o 'return'. */
-    "strictNullChecks": true,                         /* Trata 'null' y 'undefined' como tipos distintos. */
-    "strictFunctionTypes": true,                      /* Comprobación estricta de los tipos de las funciones. */
-    "strictBindCallApply": true,                      /* Habilita la comprobación estricta para los métodos 'bind', 'call' y 'apply'. */
-    "strictPropertyInitialization": true,             /* Verifica la inicialización de las propiedades de las clases en el constructor. */
-    "useUnknownInCatchVariables": true,               /* Cambia el tipo de las variables de catch a 'unknown' en lugar de 'any'. */
-    "noImplicitThis": true,                           /* Informa si 'this' tiene el tipo 'any'. */
-    "exactOptionalPropertyTypes": true,               /* Trata las propiedades opcionales como exactamente el tipo, no 'undefined' o el tipo original. */
-    "noUncheckedIndexedAccess": true,                 /* Asegura que las propiedades accedidas a través de índices puedan ser 'undefined'. */
-    "noImplicitOverride": true,                       /* Requiere que los métodos sobrecargados usen el modificador 'override'. */
-    "noPropertyAccessFromIndexSignature": true,       /* Exige el uso de accesos indexados en lugar de acceso directo a las propiedades. */
-
-    /* Modules */
-    "moduleResolution": "node",                       /* Usar la resolución de módulos de Node.js para facilitar la importación de módulos. */
-
-    /* Interop Constraints */
-    "allowSyntheticDefaultImports": true,             /* Permite importar módulos sin una exportación por defecto. */
-
-    /* Type Checking */
-    // "skipDefaultLibCheck": true,                     /* Omite la comprobación de tipos en los archivos predeterminados de la biblioteca. */
-    // "noLib": true,                                  /* Deshabilita la inclusión de archivos de biblioteca, excluyendo 'lib.d.ts'. */
-    
-    /* Emit */
-    "declaration": true,                              /* Genera archivos de declaración .d.ts. */
-    "declarationMap": true,                           /* Crea mapas de origen para los archivos .d.ts. */
-    "sourceMap": true,                                /* Crea archivos de mapas de fuente para los archivos JavaScript generados. */
-    "removeComments": true                           /* Elimina los comentarios de los archivos emitidos. */
+    "target": "es2022",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "lib": [
+      "es2022",
+      "dom"
+    ],
+    "strict": true,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+    "noImplicitThis": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": true
   },
   "include": [
-    "src/**/*.ts"                                    /* Incluye todos los archivos TypeScript dentro de la carpeta 'src'. */
+    "src/**/*.ts"
   ],
   "exclude": [
-    "node_modules"                                   /* Excluye la carpeta 'node_modules' para evitar que se comprueben archivos de dependencias. */
+    "node_modules"
   ]
 }
-
